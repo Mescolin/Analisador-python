@@ -1,0 +1,67 @@
+story_number,story_id,analysts_count,total_unique_requirements,common_requirements,agreement_ratio,what,who,why
+1,89,3,6,0,0.0,I want to view a list of sponsors,AnonymousUser,so that I can thank all the awesome sponsors.
+10,145,4,10,0,0.0,to tie in a cancellation deadline to whatever registration / cancellation workflow exists,TrainingCoordinator,so we don't loose money or spots.
+11,151,4,14,0,0.0,"to add to ""my schedule"" if there is a schedule feature on the Site",Trainee,they can schedule their event experience.
+12,156,4,31,0,0.0,to see which trainings I have signed up for,Trainee,they can schedule their event experience.
+13,158,4,29,0,0.0,to have a view that is attached to their training node that shows all attendee information Trainers can see all class attendance at first because there are so little Trainers and they are trusted with privacy,Trainer,the training coordinator doesn't have to do all the work to get login info for environment setup.
+14,174,4,26,1,0.038461538461538464,to have an admin view where all trainee information is shown and can be filtered to show a single training session,Training Coordinator,I can see WTF is happening.
+15,179,4,20,0,0.0,"to have a dedicated page for each class to learn more about the offering The following information must be shown: Logo, title, Trainers, location, possibly a map view, datetime, skill level, registrations remaining, link to register for class. The URL path should be SEO friendly /training/training-title",AnonymousUser,"I can choose the right class, AND the Trainer can tweet and promote their class."
+16,238,4,8,0,0.0,"to have the training options clearly marked for the following information: day and time of training, title, short summary, Trainers, level, number of registrations, remaining registrations, location of training, link to full details of the training, register now link",AnonymousUser,I can shop for training all with one page AND find their class on on one page.
+17,242,4,29,0,0.0,to have a training landing page with an intro section and a list of all training offerings and promote call for trainings,AnonymousUser,so that I can shop for training all with one page and we can have a call for trainings for selection.
+18,249,4,5,0,0.0,to have a link on the home page to a list of training options,AnonymousUser,I can take training.
+19,252,4,6,0,0.0,to find out where the coding lounge is and what time it is open,AnonymousUser,I can code with my friends.
+2,113,3,10,0,0.0,to view a list of User profiles,AnonymousUser,I know who is attending the conference.
+20,255,4,37,0,0.0,to refund sponsorship money that was processed via stripe,Administrator,people get their monies back.
+21,262,4,28,0,0.0,"find a link on the sponsorships page to become a 350,00 level sponsor",Authenticated User,I can pay for and become a sponsor role.
+22,268,4,20,0,0.0,to See a list of attendees associated with this Company,AnonymousUser,I know who from this sponsor organization is attending.
+23,271,4,36,0,0.0,I want to identify myself as and pay for a 350 Company sponsorship,AuthenticatedUser,so that I can easily become a sponsor at this level without having to interface with badCamp personnel to get a sponsorship.
+24,277,4,27,0,0.0,to create and maintain venues,Administrator,I can provide location details to help Users find what they're looking for.
+25,351,4,21,1,0.047619047619047616,to view venue details,AnonymousUser,I can get a sense of the location and see the events happening there.
+26,352,4,20,1,0.05,to see a list of the sessions associated with sponsor attendees,AnonymousUser,I know where I can engage with this sponsor and where they are thought leaders.
+27,353,4,32,1,0.03125,to Enter payment information and have my card charged for an individual sponsorship,AuthenticatedUser,I can pay for an individual sponsorship.
+28,354,4,20,0,0.0,I want to link BADCamp attendees to my sponsorship page,Sponsor,so that I can show off our level of attendance.
+29,355,4,24,1,0.041666666666666664,I want to update my User profile,AuthenticatedUser,so that I can connect with other Drupalists at BADCamp.
+3,114,3,22,2,0.09090909090909091,email all the Trainers at once from the WebSite for info and updates,Training Coordinator,It is easier to use.
+30,356,4,18,0,0.0,I want to sign up for the BADCamp newsletter,As a AnonymousUser,so that I can stay up to date with the latest communications about BADCamp.
+31,357,4,18,0,0.0,I want to tag my blog posts for consumption by Drupal Planet,Administrator,so that they will be listed on the Drupal Planet blog.
+32,358,4,20,0,0.0,I want to create blog posts,Administrator,so that I can share the latest information about BADCamp with the public.
+33,359,4,13,1,0.07692307692307693,I want to read the blog.,AnonymousUser,so that I can stay informed about all the latest happenings with BADCamp.
+34,360,4,25,0,0.0,I want to sponsor a summit that matches my brand.,As a Sponsor.,so that I can get exposure to potential customers and otherwise tout my Drupal credentials.
+35,361,4,33,0,0.0,I want to register for a summit,As a Attendee,so that I can reserve my seat at the summit.
+36,362,4,18,1,0.05555555555555555,I want to get detailed directions to the summit venue.,As a Attendee.,so that I can get to the summit easily on the day of the event.
+37,363,4,19,1,0.05263157894736842,I want to see what summits I'm signed up for.,As a Attendee.,so that I can confirm my attendence and prevent myself from accidentally double-booking with a training or another summit.
+38,364,4,21,1,0.047619047619047616,I want to see a list of attendees signed up for my summit.,As a Summit Coordinator.,so that I can communicate with my attendees by email prior to the event.
+39,365,4,21,1,0.047619047619047616,I want to list basic information about my summit,As aSummit Coordinator,so that I can inform potential attendees on why they should attend my summit.
+4,116,3,12,0,0.0,have a very clear map where the buildings and rooms are,Attendee,I can make it to class on time.
+40,366,4,20,1,0.05,I want to list sponsors for my summit,As a Summit Coordinator,so that I can make sure sponsors feel rewarded and will be interested in sponsoring in future years.
+41,367,4,21,0,0.0,I want to list an agenda for my summit,Summit Coordinator,so that I can entice attendees and give positive feedback to presenters to encourage participation.
+42,368,4,10,1,0.1,I want to see how many seats are left for the summit,AnonymousUser,so that I can make sure to register in-time to reserve my spot.
+43,370,4,15,1,0.06666666666666667,I want to see specific details on summits,As a AnonymousUser,so that I can learn more about the summit I'm interested in to see if it matches my interests
+44,371,4,11,1,0.09090909090909091,I want to see a list of all the summits,AnonymousUser,so that I can determine which summit I might be interested and able to attend.
+45,372,4,13,1,0.07692307692307693,I want to learn about sponsorship levels,AnonymousUser,so that I can determine the right level of sponsorship for my organization.
+46,373,4,18,0,0.0,I want to use a WYSIWYG editor for all long-form Content,AuthenticatedUser,so that I don't have to know HTML to update my Content.
+47,374,4,12,1,0.08333333333333333,I want to Link to my sponsorship profile from my job listings,Sponsor,so that recruits can learn more about my organization.
+48,375,4,13,0,0.0,I want to learn about posting jobs as a sponsor and contact the sponsorship person,AnonymousUser,so that I have the opportunty to post my job listing on the BADCamp Site.
+49,376,4,23,1,0.043478260869565216,I want to post a job,As a Sponsor,so that I can hire top-tier Drupal talent.
+5,117,3,15,1,0.06666666666666667,to edit my training node myself,Trainer,the training coordinators don't have to and links to slides.
+50,377,4,17,1,0.058823529411764705,I want to view the job board,AuthenticatedUser,so that I can look for an interesting Drupal gig
+51,378,4,21,0,0.0,I want to assign a room to a time slot and a location,As a Administrator,so that I can populate the schedule .
+52,379,4,10,1,0.1,I want to see the schedule,AnonymousUser,so that I can plan my day and figure out where to go.
+53,380,4,10,1,0.1,I want to see the final list of sessions approved,AnonymousUser,so that I can see what's going on at BADCamp .
+54,381,4,21,0,0.0,I want to bulk approve sessions as accepted,Administrator,so that I can save time.
+55,382,4,20,0,0.0,I want to mark a session as accepted,Administrator,so that I can populate the schedule .
+56,383,4,13,1,0.07692307692307693,I want to receive a notification when sessions have been evaluated,AnonymousUser,so that I know whether I've been accepted or rejected.
+57,384,4,13,1,0.07692307692307693,I want to receive a notification when I submit a session,AnonymousUser,so that know that my session went through ok.
+58,385,4,22,0,0.0,I want to edit my session,AuthenticatedUser,so that if I make a mistake
+59,386,4,30,1,0.03333333333333333,I want to register to speak at BADCamp,AnonymousUser,so that I submit a session.
+6,120,3,11,0,0.0,to limit to one registration per day per authenticated User,Trainee,we don't have duplicate spaces.
+60,387,4,21,0,0.0,I want to submit a session at BADCAMP,AuthenticatedUser,so that I can get my session evaluated.
+61,388,4,24,0,0.0,I want to personalize my sponsorship page,Sponsor,so that I can promote my brand.
+62,389,4,10,1,0.1,I want to see a list of all the summits that include when they are,AnonymousUser,so that I can determine which summit I want to attend.
+63,390,4,18,1,0.05555555555555555,I want to Be offered several choices of idividual sponsorship on the second page of registration,AuthenticatedUser,so that I can be awesome and financially support the Camp.
+64,391,4,8,0,0.0,I want to easily find a link in the menu that links to the registration form,AnonymousUser,so that I can easily register for the Camp.
+65,392,4,29,1,0.034482758620689655,I want to fill out a User registration form,AnonymousUser,so that I can register for the Camp and get an account on the WebSite.
+66,393,4,10,1,0.1,I want to find session information,AnonymousUser,so that I can go to a session.
+7,123,3,16,1,0.0625,to have an admin view that helps track registration status for each attendee so that,Training Coordinator,we can see if attendend
+8,125,3,21,1,0.047619047619047616,to be added to a training waitlist,Attendee,so they can be considered for a class.
+9,129,3,12,1,0.08333333333333333,to must accept the cancellation terms with a checkbox,Trainee,they can be accountable.
