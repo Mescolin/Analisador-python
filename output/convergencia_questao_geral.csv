@@ -1,0 +1,358 @@
+story_number,general_question,analyst_count,analysts
+1,Does the user story implementation involve input from the client or the environment?,1,victor
+1,Does the user story implementation involve some output?,3,"daniel, marcelo, tulio"
+2,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, marcelo"
+2,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+2,Does the user story implementation involve some data serialization or deserialization?,1,daniel
+2,Does the user story implementation involve some output?,3,"daniel, marcelo, tulio"
+3,Does the user story implementation involve any data storage in the log?,1,daniel
+3,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+3,Does the user story implementation involve input from the client or the environment?,4,"daniel, marcelo, tulio, victor"
+3,Does the user story implementation involve some administrative interface?,2,"daniel, tulio"
+3,Does the user story implementation involve some data serialization or deserialization?,1,daniel
+3,Does the user story implementation involve some output?,2,"daniel, marcelo"
+3,Does the user story involve some token?,1,daniel
+4,"Does the user story implementation involve any sensitive transactions, data, or API?",1,tulio
+4,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+4,Does the user story implementation involve some administrative interface?,1,tulio
+4,Does the user story implementation involve some data serialization or deserialization?,1,daniel
+4,Does the user story implementation involve some output?,3,"daniel, marcelo, tulio"
+5,"Does the user story implementation involve any sensitive transactions, data, or API?",3,"daniel, marcelo, tulio"
+5,Does the user story implementation involve input from the client or the environment?,4,"daniel, marcelo, tulio, victor"
+5,Does the user story implementation involve some administrative interface?,2,"daniel, tulio"
+5,Does the user story implementation involve some output?,1,daniel
+5,Does the user story involve some token?,1,daniel
+5,Does the user story involve the implementation/change of some system authentication?,1,daniel
+6,"Does the user story implementation involve any sensitive transactions, data, or API?",1,marcelo
+6,Does the user story implementation involve input from the client or the environment?,1,daniel
+6,Does the user story implementation involve some output?,1,daniel
+6,Does the user story involve some token?,2,"daniel, marcelo"
+7,Does the user story implementation involve any data storage in the log?,1,daniel
+7,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+7,Does the user story implementation involve input from the client or the environment?,1,daniel
+7,Does the user story implementation involve some administrative interface?,4,"daniel, marcelo, tulio, victor"
+7,Does the user story implementation involve some output?,2,"daniel, tulio"
+7,Does the user story involve some token?,1,daniel
+8,"Does the user story implementation involve any sensitive transactions, data, or API?",1,daniel
+8,Does the user story implementation involve input from the client or the environment?,3,"daniel, marcelo, victor"
+8,Does the user story implementation involve some output?,1,daniel
+8,Does the user story involve some token?,1,daniel
+9,Does the user story implementation involve any data storage in the log?,1,daniel
+9,Does the user story implementation involve input from the client or the environment?,3,"daniel, marcelo, victor"
+9,Does the user story implementation involve some administrative interface?,1,daniel
+9,Does the user story implementation involve some data serialization or deserialization?,1,daniel
+9,Does the user story implementation involve some output?,1,daniel
+10,Does the user story implementation involve any data storage in the log?,1,daniel
+10,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+10,Does the user story implementation involve input from the client or the environment?,1,daniel
+10,Does the user story implementation involve some administrative interface?,2,"daniel, tulio"
+10,Does the user story implementation involve some output?,2,"daniel, marcelo"
+11,Does the user story implementation involve any data storage in the log?,1,daniel
+11,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+11,Does the user story implementation involve input from the client or the environment?,3,"daniel, marcelo, victor"
+11,Does the user story implementation involve some administrative interface?,1,tulio
+11,Does the user story implementation involve some data serialization or deserialization?,1,daniel
+11,Does the user story implementation involve some output?,1,daniel
+11,Does the user story involve some token?,1,daniel
+12,"Does the user story implementation involve any sensitive transactions, data, or API?",1,tulio
+12,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+12,Does the user story implementation involve some administrative interface?,1,tulio
+12,Does the user story implementation involve some output?,3,"daniel, marcelo, tulio"
+12,Does the user story involve some token?,1,daniel
+12,Does the user story involve the implementation/change of some system authentication?,1,daniel
+13,"Does the user story implementation involve any sensitive transactions, data, or API?",4,"daniel, marcelo, tulio, victor"
+13,Does the user story implementation involve input from the client or the environment?,1,daniel
+13,Does the user story implementation involve some administrative interface?,2,"daniel, tulio"
+13,Does the user story implementation involve some data serialization or deserialization?,1,daniel
+13,Does the user story implementation involve some output?,3,"daniel, marcelo, tulio"
+13,Does the user story involve some token?,1,daniel
+13,Does the user story involve the implementation/change of some system authentication?,1,daniel
+14,Does the user story implementation involve any data storage in the log?,1,daniel
+14,"Does the user story implementation involve any sensitive transactions, data, or API?",3,"daniel, marcelo, tulio"
+14,Does the user story implementation involve input from the client or the environment?,3,"daniel, marcelo, victor"
+14,Does the user story implementation involve some administrative interface?,4,"daniel, marcelo, tulio, victor"
+14,Does the user story implementation involve some output?,3,"daniel, marcelo, tulio"
+14,Does the user story involve some token?,1,daniel
+14,Does the user story involve the implementation/change of some system authentication?,1,daniel
+15,"Does the user story implementation involve any sensitive transactions, data, or API?",1,victor
+15,Does the user story implementation involve input from the client or the environment?,1,daniel
+15,Does the user story implementation involve some output?,3,"daniel, marcelo, tulio"
+16,"Does the user story implementation involve any sensitive transactions, data, or API?",1,victor
+16,Does the user story implementation involve input from the client or the environment?,1,daniel
+16,Does the user story implementation involve some output?,3,"daniel, marcelo, tulio"
+17,Does the user story implementation involve any data storage in the log?,1,daniel
+17,"Does the user story implementation involve any sensitive transactions, data, or API?",1,victor
+17,Does the user story implementation involve input from the client or the environment?,1,daniel
+17,Does the user story implementation involve some output?,3,"daniel, marcelo, tulio"
+18,Does the user story implementation involve some output?,3,"daniel, marcelo, tulio"
+19,Does the user story implementation involve input from the client or the environment?,1,marcelo
+19,Does the user story implementation involve some output?,3,"daniel, marcelo, tulio"
+20,Does the user story implementation involve any data storage in the log?,1,daniel
+20,"Does the user story implementation involve any sensitive transactions, data, or API?",4,"daniel, marcelo, tulio, victor"
+20,Does the user story implementation involve input from the client or the environment?,3,"daniel, tulio, victor"
+20,Does the user story implementation involve some administrative interface?,2,"tulio, victor"
+20,Does the user story implementation involve some data serialization or deserialization?,1,daniel
+20,Does the user story implementation involve some output?,2,"daniel, tulio"
+20,Does the user story involve some token?,1,daniel
+20,Does the user story involve the implementation/change of some system authentication?,1,daniel
+21,Does the user story implementation involve any data storage in the log?,1,daniel
+21,"Does the user story implementation involve any sensitive transactions, data, or API?",3,"daniel, marcelo, tulio"
+21,Does the user story implementation involve input from the client or the environment?,2,"daniel, tulio"
+21,Does the user story implementation involve some administrative interface?,1,tulio
+21,Does the user story implementation involve some data serialization or deserialization?,1,daniel
+21,Does the user story implementation involve some output?,2,"daniel, victor"
+21,Does the user story involve some token?,1,daniel
+21,Does the user story involve the implementation/change of some system authentication?,1,daniel
+22,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, marcelo"
+22,Does the user story implementation involve input from the client or the environment?,1,daniel
+22,Does the user story implementation involve some output?,3,"daniel, tulio, victor"
+23,Does the user story implementation involve any data storage in the log?,1,daniel
+23,"Does the user story implementation involve any sensitive transactions, data, or API?",3,"daniel, marcelo, tulio"
+23,Does the user story implementation involve input from the client or the environment?,3,"daniel, marcelo, tulio"
+23,Does the user story implementation involve some data serialization or deserialization?,1,daniel
+23,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+23,Does the user story involve some token?,1,daniel
+23,Does the user story involve the implementation/change of some system authentication?,1,daniel
+24,Does the user story implementation involve any data storage in the log?,1,daniel
+24,"Does the user story implementation involve any sensitive transactions, data, or API?",1,tulio
+24,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+24,Does the user story implementation involve some administrative interface?,3,"daniel, tulio, victor"
+24,Does the user story implementation involve some data serialization or deserialization?,1,daniel
+24,Does the user story implementation involve some output?,2,"daniel, marcelo"
+24,Does the user story involve some token?,2,"daniel, tulio"
+24,Does the user story involve the implementation/change of some system authentication?,1,daniel
+25,Does the user story implementation involve any data storage in the log?,1,daniel
+25,"Does the user story implementation involve any sensitive transactions, data, or API?",1,daniel
+25,Does the user story implementation involve input from the client or the environment?,1,daniel
+25,Does the user story implementation involve some data serialization or deserialization?,1,daniel
+25,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+25,Does the user story involve some token?,1,daniel
+26,Does the user story implementation involve any data storage in the log?,1,daniel
+26,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, marcelo"
+26,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+26,Does the user story implementation involve some data serialization or deserialization?,1,daniel
+26,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+26,Does the user story involve some token?,1,daniel
+27,Does the user story implementation involve any data storage in the log?,1,daniel
+27,"Does the user story implementation involve any sensitive transactions, data, or API?",4,"daniel, marcelo, tulio, victor"
+27,Does the user story implementation involve input from the client or the environment?,4,"daniel, marcelo, tulio, victor"
+27,Does the user story implementation involve some data serialization or deserialization?,2,"daniel, victor"
+27,Does the user story implementation involve some output?,1,daniel
+27,Does the user story involve some token?,3,"daniel, tulio, victor"
+27,Does the user story involve the implementation/change of some system authentication?,2,"daniel, tulio"
+28,Does the user story implementation involve any data storage in the log?,1,daniel
+28,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+28,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+28,Does the user story implementation involve some administrative interface?,1,tulio
+28,Does the user story implementation involve some output?,2,"daniel, marcelo"
+28,Does the user story involve some token?,2,"daniel, tulio"
+28,Does the user story involve the implementation/change of some system authentication?,1,daniel
+29,Does the user story implementation involve any data storage in the log?,1,daniel
+29,"Does the user story implementation involve any sensitive transactions, data, or API?",4,"daniel, marcelo, tulio, victor"
+29,Does the user story implementation involve input from the client or the environment?,3,"daniel, tulio, victor"
+29,Does the user story implementation involve some output?,1,daniel
+29,Does the user story involve some token?,2,"daniel, tulio"
+29,Does the user story involve the implementation/change of some system authentication?,2,"daniel, tulio"
+30,Does the user story implementation involve any data storage in the log?,1,daniel
+30,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, victor"
+30,Does the user story implementation involve input from the client or the environment?,3,"daniel, tulio, victor"
+30,Does the user story implementation involve some output?,2,"daniel, marcelo"
+30,Does the user story involve some token?,1,daniel
+31,Does the user story implementation involve any data storage in the log?,1,daniel
+31,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+31,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+31,Does the user story implementation involve some administrative interface?,3,"daniel, tulio, victor"
+31,Does the user story implementation involve some output?,2,"daniel, marcelo"
+31,Does the user story involve some token?,2,"daniel, tulio"
+32,Does the user story implementation involve any data storage in the log?,1,daniel
+32,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+32,Does the user story implementation involve input from the client or the environment?,3,"daniel, marcelo, victor"
+32,Does the user story implementation involve some administrative interface?,3,"daniel, tulio, victor"
+32,Does the user story implementation involve some output?,2,"daniel, tulio"
+32,Does the user story involve some token?,2,"daniel, tulio"
+33,Does the user story implementation involve any data storage in the log?,1,daniel
+33,"Does the user story implementation involve any sensitive transactions, data, or API?",1,daniel
+33,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+33,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+33,Does the user story involve some token?,1,daniel
+34,Does the user story implementation involve any data storage in the log?,1,daniel
+34,"Does the user story implementation involve any sensitive transactions, data, or API?",3,"daniel, tulio, victor"
+34,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+34,Does the user story implementation involve some administrative interface?,1,daniel
+34,Does the user story implementation involve some output?,2,"daniel, marcelo"
+34,Does the user story involve some token?,2,"daniel, tulio"
+34,Does the user story involve the implementation/change of some system authentication?,1,daniel
+35,Does the user story implementation involve any data storage in the log?,1,daniel
+35,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+35,Does the user story implementation involve input from the client or the environment?,3,"daniel, marcelo, victor"
+35,Does the user story implementation involve some output?,1,daniel
+35,Does the user story involve some token?,2,"daniel, tulio"
+35,Does the user story involve the implementation/change of some system authentication?,2,"daniel, victor"
+36,Does the user story implementation involve any data storage in the log?,1,daniel
+36,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+36,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+36,Does the user story implementation involve some data serialization or deserialization?,1,daniel
+36,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+36,Does the user story involve some token?,2,"daniel, tulio"
+37,Does the user story implementation involve any data storage in the log?,1,daniel
+37,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+37,Does the user story implementation involve input from the client or the environment?,1,daniel
+37,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+37,Does the user story involve some token?,2,"daniel, tulio"
+37,Does the user story involve the implementation/change of some system authentication?,1,daniel
+38,Does the user story implementation involve any data storage in the log?,1,daniel
+38,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+38,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+38,Does the user story implementation involve some administrative interface?,1,daniel
+38,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+38,Does the user story involve some token?,2,"daniel, tulio"
+38,Does the user story involve the implementation/change of some system authentication?,1,daniel
+39,Does the user story implementation involve any data storage in the log?,1,daniel
+39,"Does the user story implementation involve any sensitive transactions, data, or API?",3,"daniel, marcelo, tulio"
+39,Does the user story implementation involve input from the client or the environment?,4,"daniel, marcelo, tulio, victor"
+39,Does the user story implementation involve some administrative interface?,1,daniel
+39,Does the user story implementation involve some output?,2,"daniel, victor"
+39,Does the user story involve some token?,2,"daniel, tulio"
+39,Does the user story involve the implementation/change of some system authentication?,1,daniel
+40,Does the user story implementation involve any data storage in the log?,1,daniel
+40,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+40,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+40,Does the user story implementation involve some administrative interface?,1,daniel
+40,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+40,Does the user story involve some token?,2,"daniel, tulio"
+40,Does the user story involve the implementation/change of some system authentication?,1,daniel
+41,Does the user story implementation involve any data storage in the log?,1,daniel
+41,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+41,Does the user story implementation involve input from the client or the environment?,3,"daniel, marcelo, victor"
+41,Does the user story implementation involve some administrative interface?,1,daniel
+41,Does the user story implementation involve some output?,3,"daniel, tulio, victor"
+41,Does the user story involve some token?,2,"daniel, tulio"
+41,Does the user story involve the implementation/change of some system authentication?,1,daniel
+42,Does the user story implementation involve any data storage in the log?,1,daniel
+42,"Does the user story implementation involve any sensitive transactions, data, or API?",1,daniel
+42,Does the user story implementation involve input from the client or the environment?,1,daniel
+42,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+43,Does the user story implementation involve any data storage in the log?,1,daniel
+43,"Does the user story implementation involve any sensitive transactions, data, or API?",1,daniel
+43,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+43,Does the user story implementation involve some data serialization or deserialization?,1,daniel
+43,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+43,Does the user story involve some token?,1,daniel
+44,Does the user story implementation involve any data storage in the log?,1,daniel
+44,"Does the user story implementation involve any sensitive transactions, data, or API?",1,daniel
+44,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+44,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+45,Does the user story implementation involve any data storage in the log?,1,daniel
+45,"Does the user story implementation involve any sensitive transactions, data, or API?",1,daniel
+45,Does the user story implementation involve input from the client or the environment?,1,daniel
+45,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+45,Does the user story involve some token?,1,daniel
+46,Does the user story implementation involve any data storage in the log?,1,daniel
+46,"Does the user story implementation involve any sensitive transactions, data, or API?",1,tulio
+46,Does the user story implementation involve input from the client or the environment?,4,"daniel, marcelo, tulio, victor"
+46,Does the user story implementation involve some output?,1,daniel
+46,Does the user story involve some token?,2,"daniel, tulio"
+47,Does the user story implementation involve any data storage in the log?,1,daniel
+47,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+47,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+47,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+47,Does the user story involve some token?,1,tulio
+48,Does the user story implementation involve any data storage in the log?,1,daniel
+48,"Does the user story implementation involve any sensitive transactions, data, or API?",1,daniel
+48,Does the user story implementation involve input from the client or the environment?,3,"daniel, marcelo, victor"
+48,Does the user story implementation involve some output?,3,"daniel, tulio, victor"
+49,Does the user story implementation involve any data storage in the log?,1,daniel
+49,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+49,Does the user story implementation involve input from the client or the environment?,4,"daniel, marcelo, tulio, victor"
+49,Does the user story implementation involve some output?,1,daniel
+49,Does the user story involve some token?,2,"daniel, tulio"
+49,Does the user story involve the implementation/change of some system authentication?,1,daniel
+50,Does the user story implementation involve any data storage in the log?,1,daniel
+50,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+50,Does the user story implementation involve input from the client or the environment?,1,daniel
+50,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+50,Does the user story involve some token?,2,"daniel, tulio"
+51,Does the user story implementation involve any data storage in the log?,1,daniel
+51,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+51,Does the user story implementation involve input from the client or the environment?,3,"daniel, tulio, victor"
+51,Does the user story implementation involve some administrative interface?,2,"daniel, tulio"
+51,Does the user story implementation involve some output?,2,"daniel, marcelo"
+51,Does the user story involve some token?,2,"daniel, tulio"
+51,Does the user story involve the implementation/change of some system authentication?,1,daniel
+52,Does the user story implementation involve any data storage in the log?,1,daniel
+52,"Does the user story implementation involve any sensitive transactions, data, or API?",1,daniel
+52,Does the user story implementation involve input from the client or the environment?,1,daniel
+52,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+53,Does the user story implementation involve any data storage in the log?,1,daniel
+53,"Does the user story implementation involve any sensitive transactions, data, or API?",1,daniel
+53,Does the user story implementation involve input from the client or the environment?,1,daniel
+53,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+54,Does the user story implementation involve any data storage in the log?,1,daniel
+54,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+54,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+54,Does the user story implementation involve some administrative interface?,3,"daniel, tulio, victor"
+54,Does the user story implementation involve some output?,2,"daniel, marcelo"
+54,Does the user story involve some token?,2,"daniel, tulio"
+54,Does the user story involve the implementation/change of some system authentication?,1,daniel
+55,Does the user story implementation involve any data storage in the log?,1,daniel
+55,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+55,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+55,Does the user story implementation involve some administrative interface?,3,"daniel, tulio, victor"
+55,Does the user story implementation involve some output?,2,"daniel, marcelo"
+55,Does the user story involve some token?,2,"daniel, tulio"
+55,Does the user story involve the implementation/change of some system authentication?,1,daniel
+56,Does the user story implementation involve any data storage in the log?,1,daniel
+56,"Does the user story implementation involve any sensitive transactions, data, or API?",1,daniel
+56,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+56,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+57,Does the user story implementation involve any data storage in the log?,1,daniel
+57,"Does the user story implementation involve any sensitive transactions, data, or API?",1,daniel
+57,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+57,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+58,Does the user story implementation involve any data storage in the log?,1,daniel
+58,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+58,Does the user story implementation involve input from the client or the environment?,3,"daniel, marcelo, victor"
+58,Does the user story implementation involve some output?,1,daniel
+58,Does the user story involve some token?,2,"daniel, tulio"
+58,Does the user story involve the implementation/change of some system authentication?,2,"daniel, tulio"
+59,Does the user story implementation involve any data storage in the log?,1,daniel
+59,"Does the user story implementation involve any sensitive transactions, data, or API?",1,daniel
+59,Does the user story implementation involve input from the client or the environment?,4,"daniel, marcelo, tulio, victor"
+59,Does the user story implementation involve some output?,2,"daniel, tulio"
+59,Does the user story involve the implementation/change of some system authentication?,1,victor
+60,Does the user story implementation involve any data storage in the log?,1,daniel
+60,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+60,Does the user story implementation involve input from the client or the environment?,3,"daniel, marcelo, victor"
+60,Does the user story implementation involve some output?,2,"daniel, tulio"
+60,Does the user story involve some token?,2,"daniel, tulio"
+60,Does the user story involve the implementation/change of some system authentication?,1,daniel
+61,Does the user story implementation involve any data storage in the log?,1,daniel
+61,"Does the user story implementation involve any sensitive transactions, data, or API?",3,"daniel, tulio, victor"
+61,Does the user story implementation involve input from the client or the environment?,3,"daniel, tulio, victor"
+61,Does the user story implementation involve some output?,2,"daniel, marcelo"
+61,Does the user story involve some token?,2,"daniel, tulio"
+61,Does the user story involve the implementation/change of some system authentication?,1,daniel
+62,Does the user story implementation involve any data storage in the log?,1,daniel
+62,"Does the user story implementation involve any sensitive transactions, data, or API?",1,daniel
+62,Does the user story implementation involve input from the client or the environment?,1,daniel
+62,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+63,Does the user story implementation involve any data storage in the log?,1,daniel
+63,"Does the user story implementation involve any sensitive transactions, data, or API?",2,"daniel, tulio"
+63,Does the user story implementation involve input from the client or the environment?,2,"daniel, tulio"
+63,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"
+63,Does the user story involve some token?,2,"daniel, tulio"
+63,Does the user story involve the implementation/change of some system authentication?,1,daniel
+64,Does the user story implementation involve any data storage in the log?,1,daniel
+64,"Does the user story implementation involve any sensitive transactions, data, or API?",1,daniel
+64,Does the user story implementation involve input from the client or the environment?,1,daniel
+64,Does the user story implementation involve some output?,3,"daniel, marcelo, tulio"
+65,Does the user story implementation involve any data storage in the log?,1,daniel
+65,"Does the user story implementation involve any sensitive transactions, data, or API?",1,daniel
+65,Does the user story implementation involve input from the client or the environment?,4,"daniel, marcelo, tulio, victor"
+65,Does the user story implementation involve some output?,2,"daniel, tulio"
+65,Does the user story involve some token?,1,daniel
+65,Does the user story involve the implementation/change of some system authentication?,2,"daniel, victor"
+66,Does the user story implementation involve any data storage in the log?,1,daniel
+66,"Does the user story implementation involve any sensitive transactions, data, or API?",1,daniel
+66,Does the user story implementation involve input from the client or the environment?,2,"daniel, victor"
+66,Does the user story implementation involve some output?,4,"daniel, marcelo, tulio, victor"

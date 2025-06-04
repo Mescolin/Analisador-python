@@ -82,22 +82,131 @@ class UserStoryAnalyzer:
                             'secao_id': requirement.get('fk_Secao_id')
                         }
 
-    def get_marked_requirements(self, story_data: Dict) -> List[Dict]:
-        marked_requirements = []
-        for question in story_data.get('questions', []):
-            for specific_question in question.get('questoesEspecificas', []):
-                for requirement in specific_question.get('requirements', []):
-                    if requirement.get('marked', False):
-                        marked_requirements.append(requirement)
-        return marked_requirements
-
     def get_requirement_frequency(self) -> Dict[str, int]:
+        """
+        Calcula a frequência com que cada requisito foi marcado em todas as histórias.
+        """
         req_count = Counter()
         for story in self.stories:
             marked_reqs = self.get_marked_requirements(story)
             for req in marked_reqs:
                 req_count[req.get('id_externo')] += 1
         return dict(req_count)
+
+    def get_marked_requirements(self, story_data: Dict) -> List[Dict]:
+        marked_requirements = []
+        for question in story_data.get('questions', []):
+            for specific_question in question.get('questoesEspecificas', []):
+                for requirement in specific_question.get('requirements', []):
+                    if requirement.get('marked', False):
+                        marked = requirement.copy()
+                        marked['specific_question'] = specific_question.get('question', {}).get('descricao', '')
+                        marked['general_question'] = question.get('question', {}).get('descricao', '')
+                        marked_requirements.append(marked)
+        return marked_requirements
+
+    def export_detalhes_por_analista_historia(self, output_path: str = "./output/por_analista_historia.csv") -> None:
+        registros = []
+        for story in self.stories:
+            analyst_id = story['_metadata']['analyst_id']
+            story_number = int(story['_metadata']['story_number'])
+            story_id = story['userStory']['id']
+            marked = self.get_marked_requirements(story)
+            for req in marked:
+                registros.append({
+                    'story_number': story_number,
+                    'story_id': story_id,
+                    'analyst_id': analyst_id,
+                    'req_id': req.get('id_externo'),
+                    'specific_question': req.get('specific_question'),
+                    'general_question': req.get('general_question')
+                })
+
+        df = pd.DataFrame(registros)
+        df = df.sort_values(by=["story_number", "analyst_id"])
+        df.to_csv(output_path, index=False)
+        print(f"Detalhamento por analista e história salvo em: {output_path}")
+
+        # Gráfico de frequência por questão geral
+        plt.figure(figsize=(12, 6))
+        geral_freq = df['general_question'].value_counts().sort_values(ascending=False)
+        geral_freq.plot(kind='bar')
+        plt.title('Frequência de Requisitos Marcados por Questão Geral')
+        plt.ylabel('Quantidade de marcações')
+        plt.xlabel('Questão Geral')
+        plt.xticks(rotation=45, ha='right')
+        plt.tight_layout()
+        plt.savefig(output_path.replace(".csv", "_grafico.png"))
+        print(f"Gráfico salvo em: {output_path.replace('.csv', '_grafico.png')}")
+
+    def export_convergencia_geral(self, output_path: str = "./output/convergencia_questao_geral.csv") -> None:
+        """
+        Gera análise de convergência por questão geral considerando múltiplas marcações para mesma questão geral,
+        mesmo que oriundas de questões específicas diferentes.
+        """
+        convergencia = defaultdict(lambda: defaultdict(set))  # {story_number: {general_question: set(analyst_id)}}
+
+        for (analyst_id, story_number), stories in self.user_analysis.items():
+            for story in stories:
+                for question in story.get("questions", []):
+                    general_desc = question["question"]["descricao"]
+                    for specific in question.get("questoesEspecificas", []):
+                        for req in specific.get("requirements", []):
+                            if req.get("marked", False):
+                                convergencia[int(story_number)][general_desc].add(analyst_id)
+
+        registros = []
+        for story_number, questoes in convergencia.items():
+            for general_question, analistas in questoes.items():
+                registros.append({
+                    "story_number": story_number,
+                    "general_question": general_question,
+                    "analyst_count": len(analistas),
+                    "analysts": ", ".join(sorted(analistas))
+                })
+
+        df = pd.DataFrame(registros)
+        df = df.sort_values(by=["story_number", "general_question"])
+        df.to_csv(output_path, index=False)
+        print(f"Convergência por questão geral salva em: {output_path}")
+
+    def generate_report(self, output_dir: str = "./output") -> None:
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+        if not self.stories:
+            self.load_stories()
+
+        print(f"Analisando {len(self.stories)} histórias de usuário...")
+        total_stories = len(set(story['userStory']['id'] for story in self.stories))
+        total_analysts = len(set(story['_metadata']['analyst_id'] for story in self.stories))
+        total_requirements = len(set(req['id_externo'] for req in self.requirements_by_id.values()))
+        total_marked = sum(len(self.get_marked_requirements(story)) for story in self.stories)
+
+        general_stats = pd.DataFrame([{
+            'total_unique_stories': total_stories,
+            'total_analysts': total_analysts,
+            'total_unique_requirements': total_requirements,
+            'total_marked_requirements': total_marked,
+            'avg_requirements_per_story': total_marked / len(self.stories) if self.stories else 0
+        }])
+        general_stats.to_csv(os.path.join(output_dir, "estatisticas_gerais.csv"), index=False)
+
+        req_freq = self.get_requirement_frequency()
+        req_freq_df = pd.DataFrame([
+            {'requisito_id': req_id, 'frequencia': freq} for req_id, freq in req_freq.items()
+        ]).sort_values('frequencia', ascending=False)
+        req_freq_df.to_csv(os.path.join(output_dir, "frequencia_requisitos.csv"), index=False)
+
+        matrix_df = self.get_story_requirement_matrix()
+        matrix_df.to_csv(os.path.join(output_dir, "matriz_historias_requisitos.csv"), index=False)
+
+        agreement_df = self.get_analyst_agreement()
+        agreement_df.to_csv(os.path.join(output_dir, "concordancia_analistas.csv"), index=False)
+
+        self.export_detalhes_por_historia(os.path.join(output_dir, "detalhes_por_historia.csv"))
+        self.export_detalhes_por_analista_historia(os.path.join(output_dir, "por_analista_historia.csv"))
+        self.export_convergencia_geral(os.path.join(output_dir, "convergencia_questao_geral.csv"))
+        print(f"Relatório gerado com sucesso no diretório: {output_dir}")
 
     def get_story_requirement_matrix(self) -> pd.DataFrame:
         all_req_ids = sorted(set(req['id_externo'] for req in self.requirements_by_id.values()))
@@ -164,7 +273,6 @@ class UserStoryAnalyzer:
         return pd.DataFrame(agreement_data)
 
     def export_detalhes_por_historia(self, output_path: str = "./output/detalhes_por_historia.csv") -> None:
-        from collections import defaultdict
         detalhes = []
         agrupamento = defaultdict(lambda: defaultdict(lambda: defaultdict(set)))
 
@@ -175,7 +283,7 @@ class UserStoryAnalyzer:
                 for sq in q.get("questoesEspecificas", []):
                     for req in sq.get("requirements", []):
                         if req.get("marked", False):
-                            agrupamento[story_number][general_question_desc][analyst_id].add(req["id_externo"])
+                            agrupamento[int(story_number)][general_question_desc][analyst_id].add(req["id_externo"])
 
         for story_number, questoes in agrupamento.items():
             for general_desc, analistas_reqs in questoes.items():
@@ -186,48 +294,16 @@ class UserStoryAnalyzer:
                     "story_number": story_number,
                     "general_question": general_desc,
                     "analysts": "; ".join(f"{k}: {sorted(v)}" for k, v in analistas_reqs.items()),
-                    "intersection": sorted(intersec),
-                    "union": sorted(uniao)
+                    "intersection": ", ".join(sorted(intersec)),
+                    "union": ", ".join(sorted(uniao)),
+                    "total_union": len(uniao),
+                    "total_intersection": len(intersec)
                 })
 
-        pd.DataFrame(detalhes).to_csv(output_path, index=False)
+        df = pd.DataFrame(detalhes)
+        df = df.sort_values(by="story_number")
+        df.to_csv(output_path, index=False)
         print(f"Arquivo CSV gerado: {output_path}")
-
-    def generate_report(self, output_dir: str = "./output") -> None:
-        if not os.path.exists(output_dir):
-            os.makedirs(output_dir)
-        if not self.stories:
-            self.load_stories()
-
-        print(f"Analisando {len(self.stories)} histórias de usuário...")
-        total_stories = len(set(story['userStory']['id'] for story in self.stories))
-        total_analysts = len(set(story['_metadata']['analyst_id'] for story in self.stories))
-        total_requirements = len(set(req['id_externo'] for req in self.requirements_by_id.values()))
-        total_marked = sum(len(self.get_marked_requirements(story)) for story in self.stories)
-
-        general_stats = pd.DataFrame([{
-            'total_unique_stories': total_stories,
-            'total_analysts': total_analysts,
-            'total_unique_requirements': total_requirements,
-            'total_marked_requirements': total_marked,
-            'avg_requirements_per_story': total_marked / len(self.stories) if self.stories else 0
-        }])
-        general_stats.to_csv(os.path.join(output_dir, "estatisticas_gerais.csv"), index=False)
-
-        req_freq = self.get_requirement_frequency()
-        req_freq_df = pd.DataFrame([
-            {'requisito_id': req_id, 'frequencia': freq} for req_id, freq in req_freq.items()
-        ]).sort_values('frequencia', ascending=False)
-        req_freq_df.to_csv(os.path.join(output_dir, "frequencia_requisitos.csv"), index=False)
-
-        matrix_df = self.get_story_requirement_matrix()
-        matrix_df.to_csv(os.path.join(output_dir, "matriz_historias_requisitos.csv"), index=False)
-
-        agreement_df = self.get_analyst_agreement()
-        agreement_df.to_csv(os.path.join(output_dir, "concordancia_analistas.csv"), index=False)
-
-        self.export_detalhes_por_historia(os.path.join(output_dir, "detalhes_por_historia.csv"))
-        print(f"Relatório gerado com sucesso no diretório: {output_dir}")
 
 def main():
     import argparse
