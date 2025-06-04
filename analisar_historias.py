@@ -83,9 +83,9 @@ class UserStoryAnalyzer:
                         }
 
     def get_requirement_frequency(self) -> Dict[str, int]:
-        """
-        Calcula a frequência com que cada requisito foi marcado em todas as histórias.
-        """
+
+        #Calcula a frequência com que cada requisito foi marcado em todas as histórias.
+
         req_count = Counter()
         for story in self.stories:
             marked_reqs = self.get_marked_requirements(story)
@@ -128,6 +128,7 @@ class UserStoryAnalyzer:
         print(f"Detalhamento por analista e história salvo em: {output_path}")
 
         # Gráfico de frequência por questão geral
+
         plt.figure(figsize=(12, 6))
         geral_freq = df['general_question'].value_counts().sort_values(ascending=False)
         geral_freq.plot(kind='bar')
@@ -140,10 +141,9 @@ class UserStoryAnalyzer:
         print(f"Gráfico salvo em: {output_path.replace('.csv', '_grafico.png')}")
 
     def export_convergencia_geral(self, output_path: str = "./output/convergencia_questao_geral.csv") -> None:
-        """
-        Gera análise de convergência por questão geral considerando múltiplas marcações para mesma questão geral,
-        mesmo que oriundas de questões específicas diferentes.
-        """
+        
+        #Gera análise de convergência por questão geral considerando múltiplas marcações para mesma questão geral
+    
         convergencia = defaultdict(lambda: defaultdict(set))  # {story_number: {general_question: set(analyst_id)}}
 
         for (analyst_id, story_number), stories in self.user_analysis.items():
@@ -169,6 +169,49 @@ class UserStoryAnalyzer:
         df = df.sort_values(by=["story_number", "general_question"])
         df.to_csv(output_path, index=False)
         print(f"Convergência por questão geral salva em: {output_path}")
+
+    def export_questoes_mais_marcadas(self, output_path: str = "./output/questoes_mais_marcadas.csv") -> None:
+        question_counter = Counter()
+        for story in self.stories:
+            for question in story.get('questions', []):
+                general = question['question']['descricao']
+                for specific in question.get('questoesEspecificas', []):
+                    for req in specific.get('requirements', []):
+                        if req.get('marked'):
+                            question_counter[general] += 1
+
+        df = pd.DataFrame(question_counter.items(), columns=["general_question", "total_marcacoes"])
+        df = df.sort_values(by="total_marcacoes", ascending=False)
+        df.to_csv(output_path, index=False)
+        print(f"Questões gerais mais marcadas salvas em: {output_path}")
+
+    def export_coocorrencia_requisitos(self, output_path: str = "./output/coocorrencia_requisitos.csv") -> None:
+        from itertools import combinations
+        coocorrencias = Counter()
+
+        for story in self.stories:
+            reqs = [req['id_externo'] for req in self.get_marked_requirements(story)]
+            for a, b in combinations(sorted(set(reqs)), 2):
+                coocorrencias[(a, b)] += 1
+
+        df = pd.DataFrame([{"req_1": a, "req_2": b, "coocorrencias": count} 
+                           for (a, b), count in coocorrencias.items()])
+        df = df.sort_values(by="coocorrencias", ascending=False)
+        df.to_csv(output_path, index=False)
+        print(f"Coocorrência de requisitos salva em: {output_path}")
+
+    def export_analise_por_secao(self, output_path: str = "./output/analise_por_secao.csv") -> None:
+        secao_counter = Counter()
+
+        for story in self.stories:
+            for req in self.get_marked_requirements(story):
+                secao_id = self.requirements_by_id.get(req['id'], {}).get('secao_id', 'Desconhecida')
+                secao_counter[secao_id] += 1
+
+        df = pd.DataFrame(secao_counter.items(), columns=["secao_id", "total_marcacoes"])
+        df = df.sort_values(by="total_marcacoes", ascending=False)
+        df.to_csv(output_path, index=False)
+        print(f"Análise por seção do ASVS salva em: {output_path}")
 
     def generate_report(self, output_dir: str = "./output") -> None:
         if not os.path.exists(output_dir):
@@ -206,6 +249,9 @@ class UserStoryAnalyzer:
         self.export_detalhes_por_historia(os.path.join(output_dir, "detalhes_por_historia.csv"))
         self.export_detalhes_por_analista_historia(os.path.join(output_dir, "por_analista_historia.csv"))
         self.export_convergencia_geral(os.path.join(output_dir, "convergencia_questao_geral.csv"))
+        self.export_questoes_mais_marcadas(os.path.join(output_dir, "questoes_mais_marcadas.csv"))
+        self.export_coocorrencia_requisitos(os.path.join(output_dir, "coocorrencia_requisitos.csv"))
+        self.export_analise_por_secao(os.path.join(output_dir, "analise_por_secao.csv"))
         print(f"Relatório gerado com sucesso no diretório: {output_dir}")
 
     def get_story_requirement_matrix(self) -> pd.DataFrame:
@@ -304,6 +350,7 @@ class UserStoryAnalyzer:
         df = df.sort_values(by="story_number")
         df.to_csv(output_path, index=False)
         print(f"Arquivo CSV gerado: {output_path}")
+
 
 def main():
     import argparse
