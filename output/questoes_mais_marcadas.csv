@@ -1,0 +1,9 @@
+general_question,total_marcacoes
+Does the user story implementation involve some output?,493
+Does the user story implementation involve input from the client or the environment?,347
+"Does the user story implementation involve any sensitive transactions, data, or API?",257
+Does the user story involve some token?,210
+Does the user story involve the implementation/change of some system authentication?,145
+Does the user story implementation involve any data storage in the log?,105
+Does the user story implementation involve some administrative interface?,46
+Does the user story implementation involve some data serialization or deserialization?,31
